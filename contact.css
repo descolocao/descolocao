@@ -1,0 +1,149 @@
+/* Estilos específicos para la página de Contacto */
+
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F5F5F5; /* Texto principal */
+    background-color: #FFFFFF ; /* Fondo verde botella */
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1F3D3D; /* Fondo verde oscuro */
+    color: #F5F5F5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #A3C9A8; /* Verde claro */
+}
+
+/* Sección de Contacto */
+.contact-section {
+    text-align: center;
+    padding: 50px;
+    background-color: #1F3D3D; /* Fondo verde oscuro */
+    color: #F5F5F5;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #A3C9A8;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: #556B2F;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    background-color: #2B4F4F; /* Fondo verde más claro */
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+button.btn {
+    background-color: #A3C9A8;
+    color: #1F3D3D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+}
+
+button.btn:hover {
+    background-color: #556B2F;
+    color: #F5F5F5;
+}
+
+/* Footer */
+footer {
+    background-color: #1F3D3D; /* Verde oscuro */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Botones de redes sociales */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #F5F5F5;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #A3C9A8; /* Verde claro */
+}
+
+.social-icons i {
+    margin

@@ -1,0 +1,257 @@
+/* Estilos globales */ 
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #F5F5F5; /* Texto principal */
+    background-color: #FFFFFF; /* Fondo verde botella */
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: #A3C9A8; /* Verde claro desaturado */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #556B2F; /* Verde oliva */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1F3D3D; /* Fondo verde oscuro */
+    color: #F5F5F5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #A3C9A8; /* Verde claro */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1F3D3D;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style: none;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.dropdown-menu a {
+    color: #F5F5F5;
+    font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+    color: #556B2F; /* Verde oliva */
+}
+
+/* Mostrar el menú al pasar el mouse */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Carrusel */
+.carousel {
+    position: relative;
+    width: 100%;  /* Asegura que el carrusel ocupe el 100% del ancho disponible */
+    height: 100vh; /* Limita la altura al 100% del viewport */
+    overflow: hidden; /* Esconde cualquier contenido que se desborde del carrusel */
+    background-color: #000; /* Fondo negro para imágenes pequeñas */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 1s ease-in-out; /* Transición más lenta (1 segundo) */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    height: 100%; /* Asegura que el contenedor tiene el 100% de altura */
+}
+
+.carousel-slide {
+    min-width: 100%; /* Cada slide ocupa todo el ancho */
+    flex-shrink: 0; /* No permite que los slides se reduzcan de tamaño */
+    height: 100%; /* Asegura que las imágenes llenen el carrusel verticalmente */
+}
+
+.carousel-slide img {
+    width: 100%; /* La imagen ocupa todo el ancho del carrusel */
+    height: 100%; /* Asegura que las imágenes mantengan la proporción original */
+    object-fit: cover; /* Recorta las imágenes para que cubran el espacio sin distorsionarse */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* Transiciones de imagen */
+}
+
+.carousel-slide img:hover {
+    transform: scale(1.1); /* Zoom suave al pasar el ratón */
+    opacity: 0.8; /* Reduce ligeramente la opacidad */
+}
+
+/* Botones de navegación del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10; /* Asegura que los botones estén por encima del carrusel */
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Hero Section - Texto sobre el carrusel */
+.hero-text {
+    position: absolute; /* Coloca el texto encima del carrusel */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centra el texto */
+    color: #F5F5F5;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Agrega sombra al texto para mayor visibilidad */
+    text-align: center;
+    z-index: 20; /* Asegura que el texto esté por encima del carrusel */
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+
+.site-title a:hover {
+    color: #556B2F; /* Cambia a verde oliva al pasar el ratón */
+}
+
+/* Para móviles */
+@media (max-width: 768px) {
+    .carousel-slide img {
+        max-height: 50vh; /* Reduce la altura en dispositivos pequeños */
+        object-fit: contain; /* Cambiar a contain para que las imágenes no se recorten en pantallas pequeñas */
+    }
+
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+/* Botón "Reserva una sesión" */
+.cta .btn {
+    background-color: #A3C9A8;
+    color: #1F3D3D;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Hace que el texto del botón esté en mayúsculas */
+    font-weight: bold; /* Agrega más énfasis al texto */
+}
+
+.cta .btn:hover {
+    background-color: #556B2F;
+    color: #F5F5F5;
+}
+
+/* Footer */
+footer {
+    background-color: #1F3D3D; /* Verde oscuro */
+    color: #F5F5F5;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Botones de redes sociales */
+.social-icons {
+    margin-top: 20px; /* Espaciado superior entre los iconos y el texto */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #F5F5F5;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #A3C9A8; /* Verde claro */
+}
+
+.social-icons i {
+    margin-right: 5px;
+}
+
+/* Texto de derechos reservados */
+footer p {
+    margin-top: 30px; /* Espaciado entre los iconos y el texto */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-text h2 {
+        font-size: 24px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+}
+
+

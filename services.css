@@ -1,0 +1,164 @@
+/* General */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    color: #F5F5F5;
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #1F3D3D;
+    color: #F5F5F5;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #F5F5F5;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    color: #A3C9A8;
+}
+
+/* Sección visual */
+.visual-section {
+    padding: 50px 20px;
+}
+
+/* Cada bloque visual */
+.visual-item {
+    margin-bottom: 50px;
+}
+
+/* Galería general */
+.gallery {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.gallery.show {
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+.gallery.hide {
+    visibility: hidden;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.gallery img {
+    width: calc(32.90%);
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    margin: 0;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
+.horizontal-banner {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 4;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.horizontal-banner img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.horizontal-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
+
+.text-overlay-banner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFF;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    text-align: center;
+}
+
+/* Pie de página */
+footer {
+    background-color: #1F3D3D;
+    color: #F5F5F5;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    display: none; /* Oculto por defecto */
+}
+
+.lightbox.show {
+    display: flex; /* Se muestra cuando se añade la clase 'show' */
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.gallery img {
+    width: calc(32.90%);
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    margin: 0;
+}
+
+.gallery img:hover {
+    transform: scale(1.02);
+}
+
